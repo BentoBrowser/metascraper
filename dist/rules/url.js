@@ -23,9 +23,10 @@ function wrap(rule) {
     //try and turn it into a URL on its own
     if (isUrl(value)) return value;else {
       var base = URL.parse(url);
-      console.log(value);
-      return URL.resolve(base.protocol + "//" + base.host, value);
+      var resolved = URL.resolve(base.protocol + "//" + base.host, value);
+      if (isUrl(resolved)) return resolved;
     }
+    return;
   };
 }
 
