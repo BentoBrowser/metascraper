@@ -27,6 +27,7 @@ function scrapeHtml(html, rules) {
 function scrapeUrl(url, rules) {
   var request = popsicle.request({
     url: url,
+    timeout: 5000,
     options: {
       jar: process.browser ? null : popsicle.jar()
     }
