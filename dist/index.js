@@ -106,6 +106,7 @@ function scrapeMetadatum($, url, rules) {
 
 module.exports = {
   RULES: RULES,
+  scrapeMetadata: scrapeMetadata,
   scrapeHtml: scrapeHtml,
   scrapeUrl: scrapeUrl,
   scrapeWindow: scrapeWindow
